@@ -63,16 +63,17 @@ jobs:
 
 
 
-    # Deploy
+   # Deploy
     - name: Deploy
       env:
-        AWS_ACCESS_KEY_ID: ${{secrets.AWS_ACCESS_KEY_ID }}
-        AWS_SECRET_ACCESS_KEY: ${{secrets.AWS_SECRET_ACCESS_KEY }}
+        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
       run: |
         aws deploy create-deployment \
         --application-name deployPractice \
         --deployment-group-name deploy-group \
         --file-exists-behavior OVERWRITE \
-        --s3-location bucket=deploy-practice,bundleType=zip,key=coinTalk.zip\
+        --s3-location bucket=deploy-practice,bundleType=zip,key=coinTalk.zip \
         --region ap-northeast-2
+
       
