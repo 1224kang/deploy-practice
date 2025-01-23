@@ -73,6 +73,6 @@ jobs:
         --application-name deployPractice \
         --deployment-group-name deploy-group \
         --file-exists-behavior OVERWRITE \
-        --s3-location bucket=deploy-practice,bundleType=zip,key=coinTalk.zip\ 
+        --s3-location bucket=deploy-practice,bundleType=zip,key=coinTalk.zip\
         --region ap-northeast-2
       
