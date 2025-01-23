@@ -14,5 +14,4 @@ public class Controller {
             return "error";  // error.html을 반환
         }
     }
-
 }
